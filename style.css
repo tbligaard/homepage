@@ -1,0 +1,13 @@
+:root { --text:#1d1d1f; --muted:#5f6368; --accent:#990000; --bg:#fdfdfc; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text);
+  font:17px/1.6 Georgia, "Times New Roman", serif; }
+header, main, footer { max-width:46rem; margin:0 auto; padding:0 1.25rem; }
+header { padding-top:3rem; padding-bottom:1rem; border-bottom:1px solid #e5e5e5; }
+h1 { margin:0; font-size:2.2rem; font-weight:normal; }
+.role { margin:.25rem 0 1rem; color:var(--muted); }
+nav a { margin-right:1.1rem; color:var(--accent); text-decoration:none;
+  font-family:system-ui, sans-serif; font-size:.95rem; }
+nav a:hover { text-decoration:underline; }
+h2 { font-weight:normal; font-size:1.4rem; margin-top:2.5rem; }
+footer { color:var(--muted); font-size:.85rem; padding:3rem 1.25rem; }
