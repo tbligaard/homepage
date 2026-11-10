@@ -5,7 +5,7 @@ Personal academic homepage of Thomas Bligaard, served at https://simulate.dk.
 - Plain static files, no build step, no framework. One shared `style.css`.
 - Pages (menu order): `index.html` (Bligaard Research Group, the front page), `publications.html`,
   `catalysis-genome.html`, `software.html`, `students.html`, `contact.html`. No CV page.
-- The header is a single line: (DTU logo, once added) + menu. No name/position line.
+- The header is a single line: DTU logo (dtu-logo.svg, Coral Red, links to dtu.dk) + menu. No name/position line.
 - The header and menu are copied into every page; when the menu changes, update
   it in all pages (mark the current page with class="active").
 - Publications: newest first, each with a DOI link.
