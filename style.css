@@ -64,3 +64,6 @@ footer p { border-top:1px solid var(--line); padding-top:1.25rem; margin:0; }
 }
 .figure { margin:2rem 0; }
 .figure img { max-width:min(100%, 460px); height:auto; display:block; }
+.hero-video { margin:2rem 0 1rem; }
+.hero-video video { width:100%; height:auto; display:block; border-radius:4px; }
+.hero-video figcaption { color:var(--muted); font-size:.85rem; margin-top:.4rem; font-family:system-ui, sans-serif; }
