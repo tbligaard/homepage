@@ -67,3 +67,15 @@ footer p { border-top:1px solid var(--line); padding-top:1.25rem; margin:0; }
 .hero-video { margin:2rem 0 1rem; }
 .hero-video video { width:100%; height:auto; display:block; border-radius:4px; }
 .hero-video figcaption { color:var(--muted); font-size:.85rem; margin-top:.4rem; font-family:system-ui, sans-serif; }
+.two-col { display:flex; gap:2rem; align-items:flex-start; }
+.two-col .col-img { flex:0 0 45%; }
+.two-col .col-img img { width:100%; height:auto; display:block; }
+.two-col .col-text p:first-child { margin-top:0; }
+.h1-row { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:.5rem 1.5rem; }
+.h1-row .links { margin:0; font-family:system-ui, sans-serif; font-size:.95rem; }
+.book-with-cover { display:flex; gap:1.5rem; align-items:flex-start; }
+.book-with-cover .cover { width:150px; height:auto; display:block; box-shadow:0 2px 8px rgba(0,0,0,.18); }
+@media (max-width:600px) {
+  .two-col, .book-with-cover { flex-direction:column; }
+  .two-col .col-img { flex-basis:auto; width:100%; }
+}
