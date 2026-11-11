@@ -79,3 +79,4 @@ footer p { border-top:1px solid var(--line); padding-top:1.25rem; margin:0; }
   .two-col, .book-with-cover { flex-direction:column; }
   .two-col .col-img { flex-basis:auto; width:100%; }
 }
+.pubs a.doi { font-family:system-ui, sans-serif; font-size:.82rem; white-space:nowrap; }
