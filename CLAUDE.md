@@ -15,3 +15,9 @@ Personal academic homepage of Thomas Bligaard, served at https://simulate.dk.
 - `CNAME` tells GitHub Pages the custom domain; do not delete it.
 - Keep it simple, readable, fast, accessible, mobile-friendly. No tracking cookies.
 - Papers: link to accepted manuscripts / DOIs, not publishers' PDFs.
+
+## Jens K. Nørskov publication list (TB, 2026-11-13)
+- `norskov-publications.html` is deliberately NOT linked from any other page.
+- Source: `_tools/norskov-publications.tsv` (section, number, doi, text), from Jens's own list (Oct 2025); DOIs from Web of Science and Crossref, each checked against Crossref.
+- Maintain: edit the TSV, then `python3 _tools/make_norskov.py`.
+- Names are not bold on either publication page (TB, 2026-11-13).

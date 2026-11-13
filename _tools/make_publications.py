@@ -33,7 +33,7 @@ for r in csv.DictReader(open(TSV, encoding='utf-8'), delimiter='\t'):
 
 def fmt(text):
     t = html.escape(text, quote=False)
-    t = re.sub(r'T\.\s?Bligaard', '<strong>T. Bligaard</strong>', t)
+    t = re.sub(r'T\.\s?Bligaard', 'T. Bligaard', t)   # name not bold (TB, 2026-11-13)
     t = re.sub(r'(\d)-(\d)', '\\1–\\2', t)          # page ranges with en dash
     return t
 
