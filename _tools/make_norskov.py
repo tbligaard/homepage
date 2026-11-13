@@ -19,7 +19,8 @@ SITE = os.path.dirname(HERE)
 TSV = os.path.join(HERE, 'norskov-publications.tsv')
 OUT = os.path.join(SITE, 'norskov-publications.html')
 SECTIONS = [('Papers', 'papers', 'Papers'), ('Books, Lecture Notes', 'books', 'Books and book chapters'),
-            ('Other Publications', 'other', 'Other publications')]
+            ('Other Publications', 'other', 'Other publications'),
+            ('To be verified', 'to-be-verified', 'To be verified')]   # provisional (TB, 2026-11-13)
 
 rows = list(csv.DictReader(open(TSV, encoding='utf-8'), delimiter='\t', quoting=csv.QUOTE_NONE))
 
