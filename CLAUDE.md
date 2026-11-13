@@ -18,6 +18,6 @@ Personal academic homepage of Thomas Bligaard, served at https://simulate.dk.
 
 ## Jens K. Nørskov publication list (TB, 2026-11-13)
 - `norskov-publications.html` is deliberately NOT linked from any other page.
-- Source: `_tools/norskov-publications.tsv` (section, number, doi, text), from Jens's own list (Oct 2025); DOIs from Web of Science and Crossref, each checked against Crossref.
+- Source: `_tools/norskov-publications.tsv` (section, date, doi, text); items numbered chronologically by date (generator). From Jens's list (Oct 2025), revised 2026-11-13: doublets removed, volumes corrected, published preprints dropped, Web of Science additions; DOIs checked against Crossref.
 - Maintain: edit the TSV, then `python3 _tools/make_norskov.py`.
 - Names are not bold on either publication page (TB, 2026-11-13).
