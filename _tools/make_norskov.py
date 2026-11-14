@@ -55,7 +55,7 @@ page = f'''<!DOCTYPE html>
 <meta name="format-detection" content="telephone=no">
 <title>Publications · Jens K. Nørskov</title>
 <meta name="description" content="Publication list of Jens K. Nørskov, with DOI links to the journal pages.">
-<link rel="stylesheet" href="style.css?v=20261114c">
+<link rel="stylesheet" href="style.css?v=20261114d">
 </head>
 <body>
 <header class="site-header">
