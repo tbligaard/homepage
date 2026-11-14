@@ -21,3 +21,5 @@ Personal academic homepage of Thomas Bligaard, served at https://simulate.dk.
 - Source: `_tools/norskov-publications.tsv` (section, date, doi, text); items numbered chronologically by date (generator). From Jens's list (Oct 2025), revised 2026-11-13: doublets removed, volumes corrected, published preprints dropped, Web of Science additions; DOIs checked against Crossref.
 - Maintain: edit the TSV, then `python3 _tools/make_norskov.py`.
 - Names are not bold on either publication page (TB, 2026-11-13).
+
+- style.css is linked as `style.css?v=YYYYMMDD` on every page (and in _tools/make_norskov.py): when style.css changes, bump the date in all of them, so browsers and the GitHub Pages cache load the new file.
