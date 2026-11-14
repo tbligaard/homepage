@@ -37,6 +37,11 @@ for r in csv.DictReader(open(TSV, encoding='utf-8'), delimiter='\t'):
     if r['section'] == 'Preprints': key[('preprints', int(r['number']))] = r['key']
 FIGS = {r['key']: r for r in csv.DictReader(open(os.path.join(HERE, 'pubfigs.tsv'), encoding='utf-8'), delimiter='\t')}
 
+def item(n, fig, text):
+    """One list item: figure (or an empty slot) on the left, number and text on the right."""
+    fig = fig or '<div class="pubfig"></div>'
+    return f'  <li><div class="pub">{fig}<div class="pub-text"><span class="pub-num">{n}.</span> {text}</div></div></li>\n'
+
 def figure(k, href):
     """Thumbnail + credit line for item k, or '' (pubfig/<key>.jpg and a row in pubfigs.tsv)."""
     f = FIGS.get(k)
@@ -61,20 +66,22 @@ for sid, lst in items.items():
         d = doi.get((sid, n))
         if d: li += f' <a class="doi" href="https://doi.org/{d}">doi:{d}</a>'
         fig = figure(key.get((sid, n)), f'https://doi.org/{d}' if d else '')
-        lis.append(f'  <li class="has-fig">{fig}{li}</li>\n' if fig else f'  <li>{li}</li>\n')
-    new = f'<h2 id="{sid}">\\1</h2>\n<ol class="pubs" reversed start="{lst[0][0]}">\n' + ''.join(lis).replace('\\', '\\\\') + '</ol>'
-    page, k = re.subn(rf'<h2 id="{sid}">(.*?)</h2>\n<ol class="pubs" reversed start="\d+">\n.*?</ol>', new, page, flags=re.S)
+        lis.append(item(n, fig, li))
+    new = f'<h2 id="{sid}">\\1</h2>\n<ol class="pubs with-figs" reversed start="{lst[0][0]}">\n' + ''.join(lis).replace('\\', '\\\\') + '</ol>'
+    page, k = re.subn(rf'<h2 id="{sid}">(.*?)</h2>\n<ol class="pubs(?: with-figs)?" reversed start="\d+">\n.*?</ol>', new, page, flags=re.S)
     print(f'{sid}: {len(lst)} items, {sum((sid, n) in doi for n, _ in lst)} with DOI', '' if k else '(SECTION NOT FOUND)')
 # Preprints are written by hand on the page; add their figures (item n = key ('preprints', n))
-m = re.search(r'<h2 id="preprints">.*?</h2>\n<ol class="pubs" reversed start="(\d+)">\n(.*?)</ol>', page, re.S)
+page = page.replace('<h2 id="preprints">Preprints</h2>\n<ol class="pubs" reversed', '<h2 id="preprints">Preprints</h2>\n<ol class="pubs with-figs" reversed')
+m = re.search(r'<h2 id="preprints">.*?</h2>\n<ol class="pubs with-figs" reversed start="(\d+)">\n(.*?)</ol>', page, re.S)
 if m:
     start, body = int(m.group(1)), m.group(2)
     items_p = re.findall(r'  <li[^>]*>(.*?)</li>\n', body, re.S)
     new = ''
     for i, t in enumerate(items_p):
+        t = re.sub(r'^<div class="pub">(?:<figure class="pubfig">.*?</figure>|<div class="pubfig"></div>)<div class="pub-text">(?:<span class="pub-num">\d+\.</span> )?(.*)</div></div>$', r'\1', t, flags=re.S)
         t = re.sub(r'^<figure class="pubfig">.*?</figure>', '', t, flags=re.S)
         a = re.search(r'href="([^"]+)"', t)
         fig = figure(key.get(('preprints', start - i)), a.group(1) if a else '')
-        new += f'  <li class="has-fig">{fig}{t}</li>\n' if fig else f'  <li>{t}</li>\n'
+        new += item(start - i, fig, t)
     page = page[:m.start(2)] + new + page[m.end(2):]
 open(PAGE, 'w', encoding='utf-8').write(page)

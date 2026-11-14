@@ -80,9 +80,14 @@ footer p { border-top:1px solid var(--line); padding-top:1.25rem; margin:0; }
   .two-col .col-img { flex-basis:auto; width:100%; }
 }
 .pubs a.doi { font-family:system-ui, sans-serif; font-size:.82rem; white-space:nowrap; }
-/* Publication figures (TB, 2026-11-14): thumbnail on the right of each item, credit below */
-.pubs li.has-fig::after { content:""; display:block; clear:both; }
-.pubfig { float:right; width:180px; margin:.15rem 0 .6rem 1.2rem; }
-.pubfig img { display:block; width:100%; height:auto; max-height:130px; object-fit:contain; background:#fff; }
-.pubfig figcaption { font-family:system-ui, sans-serif; font-size:.68rem; line-height:1.25; color:var(--muted); margin-top:.25rem; }
-@media (max-width:600px) { .pubfig { width:120px; margin-left:.8rem; } .pubfig img { max-height:90px; } }
+/* Publication figures (TB, 2026-11-14): figure to the left of each item, like the textbook cover;
+   the number is written in the text (pub-num), so the list markers are hidden */
+.pubs.with-figs { list-style:none; padding-left:0; }
+.pubs.with-figs li { margin-bottom:1.4rem; }
+.pub { display:flex; gap:1.5rem; align-items:flex-start; }
+.pub-text { flex:1; min-width:0; }
+.pub-num { color:var(--muted); }
+.pubfig { flex:0 0 150px; width:150px; margin:0; }
+.pubfig img { display:block; width:150px; height:auto; max-height:200px; object-fit:contain; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,.18); }
+.pubfig figcaption { font-family:system-ui, sans-serif; font-size:.68rem; line-height:1.25; color:var(--muted); margin-top:.35rem; }
+@media (max-width:600px) { .pub { gap:.9rem; } .pubfig { flex-basis:100px; width:100px; } .pubfig img { width:100px; max-height:140px; } }
