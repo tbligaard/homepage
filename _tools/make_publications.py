@@ -48,7 +48,7 @@ def figure(k, href):
     if not f or not os.path.exists(os.path.join(ROOT, 'pubfig', k + '.jpg')): return ''
     w, h = f['size'].split('x')
     v = hashlib.md5(open(os.path.join(ROOT, 'pubfig', k + '.jpg'), 'rb').read()).hexdigest()[:8]   # cache-busting
-    img = f'<img src="pubfig/{k}.jpg?v={v}" width="{w}" height="{h}" alt="Figure from this publication" loading="lazy">'
+    img = f'<img src="pubfig/{k}.jpg?v={v}" width="{w}" height="{h}" alt="Figure from this publication" loading="lazy"{(' style="max-height:' + f['maxh'] + 'px"') if f.get('maxh') else ''}>'
     if href: img = f'<a href="{href}">{img}</a>'
     return f'<figure class="pubfig">{img}<figcaption>{html.escape(f["credit"], quote=False)}</figcaption></figure>'
 
