@@ -94,3 +94,8 @@ footer p { border-top:1px solid var(--line); padding-top:1.25rem; margin:0; }
 .pubs.with-figs li:nth-child(even) .pubfig { align-items:flex-end; text-align:right; }
 .pubfig figcaption { font-family:system-ui, sans-serif; font-size:.68rem; line-height:1.25; color:var(--muted); margin-top:.35rem; }
 @media (max-width:600px) { .pub { gap:.9rem; } .pubfig { flex-basis:100px; width:100px; } .pubfig img { max-width:100px; max-height:140px; } }
+/* Software page: two columns (TB, 2026-11-14) */
+.software-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.4rem 2.5rem; margin:1.5rem 0 2rem; }
+.software-grid > div { margin:0; }
+.software-grid dd { margin-left:0; }
+@media (max-width:600px) { .software-grid { grid-template-columns:1fr; } }
