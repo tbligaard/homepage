@@ -10,7 +10,7 @@ Only the <ol> lists of the sections below are replaced; everything else on the
 page (header, textbook box, Preprints section, menu) is left as it is.
 Run from the homepage folder:  python3 _tools/make_publications.py
 """
-import csv, html, re, os
+import csv, html, re, os, hashlib
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 LIB = os.path.join(ROOT, '..', 'hub', 'library')
@@ -47,7 +47,8 @@ def figure(k, href):
     f = FIGS.get(k)
     if not f or not os.path.exists(os.path.join(ROOT, 'pubfig', k + '.jpg')): return ''
     w, h = f['size'].split('x')
-    img = f'<img src="pubfig/{k}.jpg" width="{w}" height="{h}" alt="Figure from this publication" loading="lazy">'
+    v = hashlib.md5(open(os.path.join(ROOT, 'pubfig', k + '.jpg'), 'rb').read()).hexdigest()[:8]   # cache-busting
+    img = f'<img src="pubfig/{k}.jpg?v={v}" width="{w}" height="{h}" alt="Figure from this publication" loading="lazy">'
     if href: img = f'<a href="{href}">{img}</a>'
     return f'<figure class="pubfig">{img}<figcaption>{html.escape(f["credit"], quote=False)}</figcaption></figure>'
 
