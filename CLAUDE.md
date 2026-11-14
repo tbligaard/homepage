@@ -22,4 +22,4 @@ Personal academic homepage of Thomas Bligaard, served at https://simulate.dk.
 - Maintain: edit the TSV, then `python3 _tools/make_norskov.py`.
 - Names are not bold on either publication page (TB, 2026-11-13).
 
-- style.css is linked as `style.css?v=YYYYMMDD` on every page (and in _tools/make_norskov.py): when style.css changes, bump the date in all of them, so browsers and the GitHub Pages cache load the new file.
+- style.css is linked as `style.css?v=YYYYMMDD` on every page (and in _tools/make_norskov.py): when style.css changes, bump the version (date, plus a letter for a second change that day) in all of them, so browsers and the GitHub Pages cache load the new file.

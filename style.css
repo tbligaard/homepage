@@ -87,7 +87,10 @@ footer p { border-top:1px solid var(--line); padding-top:1.25rem; margin:0; }
 .pub { display:flex; gap:1.5rem; align-items:flex-start; }
 .pub-text { flex:1; min-width:0; }
 .pub-num { color:var(--muted); }
-.pubfig { flex:0 0 150px; width:150px; margin:0; }
-.pubfig img { display:block; width:150px; height:auto; max-height:200px; object-fit:contain; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,.18); }
+.pubfig { flex:0 0 150px; width:150px; margin:0; display:flex; flex-direction:column; align-items:flex-start; }
+.pubfig img { display:block; width:auto; height:auto; max-width:150px; max-height:200px; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,.18); }
+/* alternate sides: odd items figure left, even items figure right (TB, 2026-11-14) */
+.pubs.with-figs li:nth-child(even) .pub { flex-direction:row-reverse; }
+.pubs.with-figs li:nth-child(even) .pubfig { align-items:flex-end; text-align:right; }
 .pubfig figcaption { font-family:system-ui, sans-serif; font-size:.68rem; line-height:1.25; color:var(--muted); margin-top:.35rem; }
-@media (max-width:600px) { .pub { gap:.9rem; } .pubfig { flex-basis:100px; width:100px; } .pubfig img { width:100px; max-height:140px; } }
+@media (max-width:600px) { .pub { gap:.9rem; } .pubfig { flex-basis:100px; width:100px; } .pubfig img { max-width:100px; max-height:140px; } }
