@@ -115,7 +115,8 @@ footer p { border-top:1px solid var(--line); padding-top:1.25rem; margin:0; }
 .hero-text span { display:table; margin:0 auto; clip-path:inset(-.3em 100% -.3em 0); animation:hero-write linear forwards; }
 .hero-text .l1 { animation-duration:2.4s; animation-delay:.6s; }
 .hero-text .l2 { animation-duration:2.4s; animation-delay:3.2s; }
-.hero-text .l3 { animation-duration:3.6s; animation-delay:5.8s; }
+.hero-text .l3 { animation-duration:2.4s; animation-delay:5.8s; }
+.hero-text .l4 { animation-duration:2.6s; animation-delay:8.4s; }
 @keyframes hero-write { to { clip-path:inset(-.3em -.3em -.3em 0); } }
 @media (prefers-reduced-motion: reduce) { .hero-text span { animation:none; clip-path:none; } }
 .hero-caption { color:var(--muted); font-size:.85rem; margin-top:.6rem; font-family:system-ui, sans-serif; }
