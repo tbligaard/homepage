@@ -1,0 +1,201 @@
+{
+ "Bligaard1999": {
+  "crop": [
+   0.06,
+   0.2,
+   0.72,
+   0.98
+  ],
+  "rot": -90
+ },
+ "BligaardEtAl2003b": {
+  "crop": [
+   0.5,
+   0,
+   1,
+   1
+  ]
+ },
+ "ChakrabortyEtAl2017": {
+  "rot": 90
+ },
+ "DoronkinEtAl2012b": {
+  "crop": [
+   0,
+   0,
+   0.5,
+   1
+  ]
+ },
+ "FalsigEtAl2007": {
+  "crop": [
+   0,
+   0,
+   1,
+   0.785
+  ]
+ },
+ "FalsigEtAl2007b": {
+  "crop": [
+   0,
+   0,
+   1,
+   0.725
+  ]
+ },
+ "FangEtAl2023": {
+  "crop": [
+   0,
+   0,
+   0.5,
+   1
+  ]
+ },
+ "HansenEtAl2019": {
+  "rot": 90
+ },
+ "HansenNorskovBligaard2019": {
+  "crop": [
+   0.19,
+   0,
+   0.82,
+   1
+  ]
+ },
+ "HummelshojEtAl2009": {
+  "rot": 90,
+  "trim": 40,
+  "box": [
+   400,
+   860
+  ]
+ },
+ "HummelshojEtAl2012": {
+  "crop": [
+   0,
+   0,
+   0.335,
+   1
+  ]
+ },
+ "JanssensEtAl2007": {
+  "crop": [
+   0.12,
+   0,
+   1,
+   0.69
+  ]
+ },
+ "JiangEtAl2009": {
+  "crop": [
+   0.5,
+   0,
+   1,
+   1
+  ]
+ },
+ "LarsenEtAl2025": {
+  "crop": [
+   0.5,
+   0,
+   1,
+   1
+  ]
+ },
+ "LauscheEtAl2013": {
+  "crop": [
+   0.672,
+   0,
+   1,
+   0.78
+  ]
+ },
+ "MallikarjunSharadaEtAl2019": {
+  "crop": [
+   0.5,
+   0,
+   1,
+   1
+  ]
+ },
+ "MedfordEtAl2015": {
+  "rot": 90
+ },
+ "NilssonEtAl2005": {
+  "crop": [
+   0,
+   0,
+   1,
+   0.8
+  ]
+ },
+ "NorskovEtAl2006": {
+  "source": "NorskovEtAl2005"
+ },
+ "NorskovEtAl2014": {
+  "image": "../../book-cover.jpg"
+ },
+ "PruskiEtAl2016": {
+  "image": "images/DOE-seal.png"
+ },
+ "SehestedEtAl2007": {
+  "crop": [
+   0,
+   0,
+   1,
+   0.79
+  ]
+ },
+ "SkulasonEtAl2010": {
+  "source": "SkulasonEtAl2010b"
+ },
+ "TangEtAl2014": {
+  "crop": [
+   0,
+   0,
+   0.5,
+   1
+  ]
+ },
+ "TrinhammerEtAl2008": {
+  "crop": [
+   0.01,
+   0.5,
+   0.5,
+   0.98
+  ]
+ },
+ "TripkovicEtAl2014": {
+  "crop": [
+   0,
+   0,
+   1,
+   0.78
+  ],
+  "rot": 90
+ },
+ "WangEtAl2011": {
+  "crop": [
+   0,
+   0,
+   1,
+   0.76
+  ]
+ },
+ "WellendorffBligaard2011": {
+  "crop": [
+   0,
+   0,
+   1,
+   0.75
+  ]
+ },
+ "ZhangEtAl2018": {
+  "crop": [
+   0,
+   0,
+   0.5,
+   1
+  ]
+ }
+}
