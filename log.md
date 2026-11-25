@@ -3,6 +3,8 @@
 Add a dated entry at the end of each work block; the current state is in `handoff.md`.
 
 ## 2026-11-25
+- TB pushed the `_config.yml` exclusion (afternoon). Checked live: simulate.dk/handoff.md and /log.md
+  return 404, so the working files are no longer published.
 - Handoff moved to `handoff.md` (current state) and this log; `_config.yml` keeps CLAUDE.md, handoff.md, NOTES.md
   and log.md off the published site (CLAUDE.md had been public at simulate.dk/CLAUDE.md).
 
