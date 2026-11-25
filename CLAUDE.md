@@ -1,5 +1,8 @@
 # homepage — simulate.dk
 
+Shared rules for all projects: `../hub/working-style.md` (read first). Current state: `handoff.md`;
+requests from other projects: `NOTES.md`.
+
 Personal academic homepage of Thomas Bligaard, served at https://simulate.dk.
 
 - Plain static files, no build step, no framework. One shared `style.css`.
@@ -45,4 +48,4 @@ Personal academic homepage of Thomas Bligaard, served at https://simulate.dk.
 
 ## Git
 - Commit as bligaard <tbligaard@me.com> (set in this repository's .git/config, 23 Nov 2026).
-- Keep `HANDOFF.md` (what was done, what is open) current and commit it with the work.
+- Keep `handoff.md` (current state: what was done, what is open) current and commit it with the work.
