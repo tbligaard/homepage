@@ -1,0 +1,8 @@
+# GitHub Pages (Jekyll) settings. The working files for Claude sessions are not part of the site:
+# without this list GitHub Pages published them (e.g. simulate.dk/CLAUDE.md). Folders starting with
+# "_" (_tools, _animation) are excluded by Jekyll anyway.
+exclude:
+  - CLAUDE.md
+  - handoff.md
+  - NOTES.md
+  - log.md

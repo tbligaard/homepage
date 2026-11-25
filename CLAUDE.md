@@ -48,4 +48,6 @@ Personal academic homepage of Thomas Bligaard, served at https://simulate.dk.
 
 ## Git
 - Commit as bligaard <tbligaard@me.com> (set in this repository's .git/config, 23 Nov 2026).
-- Keep `handoff.md` (current state: what was done, what is open) current and commit it with the work.
+- Keep `handoff.md` (current state) current and add an entry to `log.md` at the end of each work block; commit both
+  with the work. These files, CLAUDE.md and NOTES.md are kept off the published site by `_config.yml`: list any new
+  working file there too.
